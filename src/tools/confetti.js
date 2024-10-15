@@ -1,6 +1,6 @@
 const duration = 60 * 60 * 1000,
 	animationEnd = Date.now() + duration,
-	defaults = { startVelocity: 30, spread: 360, ticks: 20, zIndex: 0 };
+	defaults = { startVelocity: 30, spread: 360, ticks: 20, zIndex: -1 };
 
 function randomInRange(min, max) {
 	return Math.random() * (max - min) + min;

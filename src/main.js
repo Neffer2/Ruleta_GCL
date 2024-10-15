@@ -20,7 +20,7 @@ const config = {
             // debug: true
         }
     },
-    backgroundColor: '#fff' // Aquí defines el color de fondo
+    transparent: true
 };
  
 export const game = new Phaser.Game(config);

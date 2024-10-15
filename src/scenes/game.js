@@ -133,7 +133,7 @@ export class Game extends Phaser.Scene {
         width = this.game.config.width;
         height = this.game.config.height;
         
-        let background = this.add.image((width/2), (height/2), 'background').setScale(1);
+        // let background = this.add.image((width/2), (height/2), 'background').setScale(1);
         let logo = this.add.image((width/2), (height/2) - 450, 'logo').setScale(1.3);
         let base = this.add.image((width/2), (height/2) + 475, 'base');
         
@@ -159,7 +159,7 @@ export class Game extends Phaser.Scene {
     popUp(premio){
         mContext.add.image((width/2), (height/2), 'bg-pop').setScale(1);
         mContext.add.image((width/2), (height/2), `bgp-${premio}`).setScale(1);
-        mContext.add.image((width/2), (height/2), 'bg-light').setScale(1);
-        mContext.add.image((width/2), (height/2), `p-${premio}`).setScale(1);
+        bglight = mContext.add.image((width/2), (height/2), 'bg-light').setScale(1);
+        mContext.add.image((width/2) + 20, (height/2), `p-${premio}`).setScale(1);
     }
 }   
