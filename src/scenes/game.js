@@ -102,24 +102,7 @@ export class Game extends Phaser.Scene {
             this.physics.add.collider(elem, puntero, function(bar = elem){
                 bar.disableBody(true, true);
                 setTimeout(() => {
-                    if (enablePost){
-                        enablePost = false;
-                        axios.post('/storePremio', {
-                            premio: bar.premio
-                        })
-                        .then(function (response) {
-                            let data = response.data;
-                            if (data.status === 'success'){
-                                mContext.popUp(bar.premio);
-                            }else if (data.status === 255){
-                                alert(data.message);
-                                location.reload();
-                            }
-                        })
-                        .catch(function (error) {
-                            console.log(error);
-                        });
-                    }
+                    mContext.popUp(bar.premio);
                 }, 500);
             });
         });
